@@ -63,7 +63,7 @@ Code:
  		Windows+VS2013.
  	Result:
  		 the recognition rate is above 94.29% 
- 		![](https://github.com/zhangqianhui/CnnForAndroid/blob/master/photo%20for%20readme/test.png)
+ 		![](https://github.com/zhangqianhui/CnnForAndroid/blob/master/photo%20for%20readme/test.PNG)
  
  		
 #How to use it?
