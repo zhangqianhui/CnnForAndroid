@@ -52,6 +52,20 @@ Code:
  
  Other arguments can't be public.
  
+ 4.Experiment 
+ 
+ 	data：
+ 
+		 500 train image , 298 test image.
+ 
+ 	platform:
+ 
+ 		Windows+VS2013.
+ 	Result:
+ 		 the recognition rate is above 94.29% 
+ 		![](https://github.com/zhangqianhui/CnnForAndroid/blob/master/photo%20for%20readme/test.png)
+ 
+ 		
 #How to use it?
  
  Just download or git clone it and then open it by eclipse with opencv for java lib ,  use NDK to build it.
