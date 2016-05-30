@@ -57,7 +57,7 @@ Code:
  Just download or git clone it and then open it by eclipse with opencv for java lib ,  use NDK to build it.
  Surely your libs docu have the opencv_java.so file or you must add this file(from Opencv-android docu).
  
-#How to use it to recognition face or other object?
+#How to use it to recognize face or other object?
 
 If want to recognition other object , you must learning Cnn and tiny-cnn , contructing optimal model and training it using 
 enough object images to get the wb-file(weights and bias values).Finish , replace /assets/tinyfile/carlogo file with wb-file.
@@ -72,7 +72,8 @@ enough object images to get the wb-file(weights and bias values).Finish , replac
 
 #Running Screenshot
 
-
+![](https://github.com/zhangqianhui/CnnForAndroid/blob/master/photo%20for%20readme/20.jpg)
+![](https://github.com/zhangqianhui/CnnForAndroid/blob/master/photo%20for%20readme/21.jpg) 
 
 #Discussing
 * [issue](https://github.com/zhangqianhui/CnnForAndroid/issues/new)
