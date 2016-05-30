@@ -1,4 +1,3 @@
-# CnnForAndroid
 ##CnnForAndroid:A Vehicle Recognition Project using Convolutional Neural Network(CNN) in Android platform。
 
 CnnForAndroid is a android platform's implementation of deep learning using Tiny-cnn structure and provide a Vehicle Recognition sample.
@@ -27,6 +26,7 @@ The major sources of our dataset include images captured by ourselves,Medialab L
 
 You can get it in JNi/test.cpp file.
 
+Code:
 ```cpp
 
   static const bool tbl[] = {
