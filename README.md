@@ -72,8 +72,8 @@ enough object images to get the wb-file(weights and bias values).Finish , replac
 
 #Running Screenshot
 
-![](https://github.com/zhangqianhui/CnnForAndroid/blob/master/photo%20for%20readme/Screenshot_2016-05-30-17-36-03.png.jpg)
-![](https://github.com/zhangqianhui/CnnForAndroid/blob/master/photo%20for%20readme/Screenshot_2016-05-30-17-36-08.png.jpg) 
+![](https://github.com/zhangqianhui/CnnForAndroid/blob/master/photo%20for%20readme/Screenshot_2016-05-30-17-36-03.png)
+![](https://github.com/zhangqianhui/CnnForAndroid/blob/master/photo%20for%20readme/Screenshot_2016-05-30-17-36-08.png) 
 
 #Discussing
 * [issue](https://github.com/zhangqianhui/CnnForAndroid/issues/new)
