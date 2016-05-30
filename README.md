@@ -20,8 +20,7 @@ CnnForAndroid is a android platform's implementation of deep learning using Tiny
 
 The major sources of our dataset include images captured by ourselves,Medialab LPR Dataset [1].
 
-![](https://github.com/zhangqianhui/CnnForAndroid/blob/master/photo%20for%20readme/20.jpg)  
-
+![](https://github.com/zhangqianhui/CnnForAndroid/blob/master/photo%20for%20readme/20.jpg)
 ![](https://github.com/zhangqianhui/CnnForAndroid/blob/master/photo%20for%20readme/21.jpg) 
 
 3.models?
@@ -53,7 +52,7 @@ You can get it in JNi/test.cpp file.
  
  Other arguments can't be public.
  
- #How to use it?
+#How to use it?
  
  Just download or git clone it and then open it by eclipse with opencv for java lib ,use NDK to build it.Surely your libs have the opencv_java.so file or you must add this file(from Opencv-android docu).
  
@@ -65,9 +64,13 @@ enough object images to get the wb-file(weights and bias values).Finish , replac
 #references about Vehicle Recogniton
 
 [1]Lazebnik S, Schmid C and Ponce J. Beyond bags of features: Spatial pyramid matching for recognizing natural scene categories. Computer Vision and Pattern Recognition, 2006 IEEE Computer Society Conference on. IEEE, 2006, 2: 2169-2178
-[2]Humayun Karim Sulehria, Ye Zhang.Vehicle Logo Recognition Using Mathematical Morphology.
+
+[2]Humayun Karim Sulehria, Ye Zhang.Vehicle Logo Recognition Using Mathematical Morphology
+
 [3]Humayun Karim Sulehria, Ye Zhang.Vehicle Logo Recognition Based on Bag-of-Words.IEEE International Conference on Advanced Video and Signal Based Surveillance,2013.
 
 #Running Screenshot
+
+
 
 
