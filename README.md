@@ -20,4 +20,5 @@ CnnForAndroid is a android platform's implementation of deep learning using Tiny
 
 The major sources of our dataset include images captured by ourselves,Medialab LPR Dataset [1].
 
-![](http://www.baidu.com/img/bdlogo.gif)  
+![](https://github.com/zhangqianhui/CnnForAndroid/blob/master/photo%20for%20readme/20.jpg)  
+![](https://github.com/zhangqianhui/CnnForAndroid/blob/master/photo%20for%20readme/21.jpg) 
