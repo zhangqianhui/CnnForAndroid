@@ -49,14 +49,14 @@ void construct_net(network<mse, gradient_descent_levenberg_marquardt>& nn) {
 #undef X
 
 	// construct nets
-	nn << convolutional_layer<tan_h>(40 , 40 , 3 , 1 , 6)  // C1, 1@32x32-in, 6@28x28-out
-		<< average_pooling_layer<tan_h>(38 , 38 , 6 , 2)   // S2, 6@28x28-in, 6@14x14-out
+	nn << convolutional_layer<tan_h>(40 , 40 , 3 , 1 , 6)
+		<< average_pooling_layer<tan_h>(38 , 38 , 6 , 2)
 		<< convolutional_layer<tan_h>(19 , 19 , 4 , 6 , 16 ,
-		connection_table(tbl, 6, 16))              // C3, 6@14x14-in, 16@10x10-in
-		<< average_pooling_layer<tan_h>(16 , 16 , 16 , 2)  // S4, 16@10x10-in, 16@5x5-out
-		<< convolutional_layer<tan_h>(8 , 8 , 3 , 16, 16) // C5, 16@5x5-in, 120@1x1-out
+		connection_table(tbl, 6, 16))
+		<< average_pooling_layer<tan_h>(16 , 16 , 16 , 2)
+		<< convolutional_layer<tan_h>(8 , 8 , 3 , 16, 16)
 		<< fully_connected_layer<tan_h>(16 * 6 * 6 , 64)
-		<< fully_connected_layer<relu>(64 , 2);       // F6, 120-in, 10-out
+		<< fully_connected_layer<relu>(64 , 2);
 }
 
 /*the result of predicting*/

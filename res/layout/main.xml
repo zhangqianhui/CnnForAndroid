@@ -19,7 +19,7 @@
         <TextView 
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="登陆"
+            android:text="Capture"
             android:textSize="20sp"
             android:textColor="#ffffff"
 			android:layout_centerHorizontal="true"
@@ -47,14 +47,14 @@
          
 	  <Button
 	    android:id="@+id/login_button"
-	    android:text="检测"
+	    android:text="capture"
 	    android:layout_width="fill_parent"
 	    android:layout_height="wrap_content"
 	    />
 	  
 	  <Button
 	    android:id="@+id/open"
-	    android:text="打开图片"
+	    android:text="open Gallery"
 	    android:layout_width="fill_parent"
 	    android:layout_height="wrap_content"
 	    />
