@@ -85,7 +85,7 @@ public class MainActivity extends Activity implements OnClickListener{
         login_button = (Button)findViewById(R.id.login_button);
         login_button.setOnClickListener(this);
         open = (Button)findViewById(R.id.open);
-        open.setOnClickListener(this);
+        //open.setOnClickListener(this);
 	}
 	
 	@SuppressLint("NewApi") @SuppressWarnings("deprecation")
@@ -224,6 +224,8 @@ public class MainActivity extends Activity implements OnClickListener{
 	        }
 	        
 	        mCamera.startPreview();
+	        
+	        new Thread(new newThread("")).start();
 	       
 	    }
 	};
@@ -261,8 +263,8 @@ public class MainActivity extends Activity implements OnClickListener{
 			// TODO Auto-generated method stub
 			
 			long start = System.currentTimeMillis();
-			//String path = FillManager.getInstance(MainActivity.this).getImg();
-			String path = str;
+			String path = FillManager.getInstance(MainActivity.this).getImg();
+			//String path = str;
 			Mat mat = Highgui.imread(path , 0);
 			Imgproc.resize(mat , mat , new Size(100 , 100));
 			int result = testCnn.jniPredict(mat.nativeObj , testCnn.model_file);
@@ -295,10 +297,8 @@ public class MainActivity extends Activity implements OnClickListener{
             int columnIndex = cursor.getColumnIndex(filePathColumn[0]);  
             String picturePath = cursor.getString(columnIndex);  
             cursor.close();  
+           
             
-            //ImageView imageView = (ImageView) findViewById(R.id.imgView);  
-            //imageView.setImageBitmap(BitmapFactory.decodeFile(picturePath));  
-            new Thread(new newThread(picturePath)).start();
         }  
    
     }  
