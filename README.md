@@ -75,5 +75,5 @@ enough object images to get the wb-file(weights and bias values).Finish , replac
 
 
 #Discussing
-*
-*email:zhang163220@gmail.com
+* [issue](https://github.com/zhangqianhui/CnnForAndroid/issues/new)
+* email:zhang163220@gmail.com
