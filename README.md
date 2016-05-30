@@ -22,7 +22,7 @@ The major sources of our dataset include images captured by ourselves,Medialab L
 ![](https://github.com/zhangqianhui/CnnForAndroid/blob/master/photo%20for%20readme/20.jpg)
 ![](https://github.com/zhangqianhui/CnnForAndroid/blob/master/photo%20for%20readme/21.jpg) 
 
-3.models?
+3.this models?
 
 You can get it in JNi/test.cpp file.
 
@@ -48,13 +48,14 @@ Code:
 		<< fully_connected_layer<relu>(64 , 2);
 		
 ```
- The models have three conv-layers and two pooling layer , fully-connect layer , in the end layer , the activation functions is relu and the size of all conv-kernel is 3x3.The optimization algorithm of cnn  is stochastic gradient levenberg marquardt.
+ My models have three conv-layers and two pooling layer , fully-connect layer , in the end layer , the activation functions is relu and the size of all conv-kernel is 3x3.The optimization algorithm of cnn  is stochastic gradient levenberg marquardt.
  
  Other arguments can't be public.
  
 #How to use it?
  
- Just download or git clone it and then open it by eclipse with opencv for java lib ,use NDK to build it.Surely your libs have the opencv_java.so file or you must add this file(from Opencv-android docu).
+ Just download or git clone it and then open it by eclipse with opencv for java lib ,  use NDK to build it.
+ Surely your libs docu have the opencv_java.so file or you must add this file(from Opencv-android docu).
  
 #How to use it to recognition face or other object?
 
@@ -73,4 +74,6 @@ enough object images to get the wb-file(weights and bias values).Finish , replac
 
 
 
-
+#Discussing
+*
+*email:zhang163220@gmail.com
