@@ -11,7 +11,7 @@ CnnForAndroid is a android platform's implementation of deep learning using Tiny
 [protobuf](https://github.com/google/protobuf)
 
 #Caffe model
-tiny-cnn provide the caffe_convertor to support the caffe model.The project also support the caffe model for compiling the caffe_convertor and protobuf.
+tiny-cnn provide the caffe-convertor to support the caffe model.The project also support the caffe model for compiling the caffe_convertor and protobuf.
 
 #For Gender Recogniton
 
@@ -20,11 +20,18 @@ tiny-cnn provide the caffe_convertor to support the caffe model.The project also
  1.Where from Training data?
  	
  	MORPH Album 2 [4].
+ 	
+ 	the test accuracy is 90.01% in my caffe's net.
+ 	
  2.the net of caffe ?
+	
+	
 	
  3.How to train yourself model?
  	
- 	Please using caffe and train your model and replace  /assets/tinyfile/*.caffemodel and /assets/tinyfile/*.protobuf file/ and change those filenames in tinyCnn.java file.
+ 	(1)Please using caffe and train your model.     
+ 	(2)then replace  /assets/tinyfile//.caffemodel and /assets/tinyfile/*.protobuf file/.
+ 	(3)Finish  change those filenames in tinyCnn.java file.
 
 #For Vehicle Recogniton 
 
@@ -95,7 +102,7 @@ Code:
 If want to recognition other object , you must learning Cnn and tiny-cnn , contructing optimal model and training it using 
 enough object images to get the wb-file(weights and bias values).Finish , replace /assets/tinyfile/carlogo file with wb-file.
 
-#references about Vehicle Recogniton
+#references 
 
 [1]Medialab LPR dataset, March. 2013[online]. Available: http://www.medialab.ntua.gr/research/LPRdataset.html
 
@@ -106,8 +113,14 @@ enough object images to get the wb-file(weights and bias values).Finish , replac
 
 #Running Screenshot
 
+
+(1)For Vehicle Recogniton 
 ![](https://github.com/zhangqianhui/CnnForAndroid/blob/master/photo%20for%20readme/23.png)
 ![](https://github.com/zhangqianhui/CnnForAndroid/blob/master/photo%20for%20readme/24.png) 
+
+(3)For gender Recognition
+
+
 
 #Discussing
 * [issue](https://github.com/zhangqianhui/CnnForAndroid/issues/new)
