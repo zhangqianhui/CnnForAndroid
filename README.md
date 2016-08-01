@@ -10,24 +10,23 @@ CnnForAndroid is a android platform's implementation of deep learning using Tiny
 
 [protobuf](https://github.com/google/protobuf)
 
-#Caffe model
-tiny-cnn provide the caffe-convertor to support the caffe model.The project also support the caffe model for compiling the caffe_convertor and protobuf.
+#Supporting Caffe model
+tiny-cnn provide the caffe-convertor.cpp to support the caffe model.The project also support the caffe model from  compiling the caffe_convertor and protobuf.
 
 #For Gender Recogniton
 
- 	this project also provide a sample for caffe model to distingguish man from woman also called gender recognition. 
+ this project also provide a sample for caffe model to distingguish man from woman also called gender recognition. 
  	
  1.Where from Training data?
  	
- 	MORPH Album 2 [4].
- 	
- 	the test accuracy is 90.01% in my caffe's net.
+ MORPH Album 2 [4].
+ the test accuracy is 90.01% in my caffe's net.
  	
  2.the net of caffe ?
 	
 	
 	
- 3.How to train yourself model?
+ 3.How to train yourself caffe model?
  	
  	(1)Please using caffe and train your model.     
  	(2)then replace  /assets/tinyfile//.caffemodel and /assets/tinyfile/*.protobuf file/.
