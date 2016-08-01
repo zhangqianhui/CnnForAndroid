@@ -1,18 +1,36 @@
-##CnnForAndroid:A Vehicle Recognition Project using Convolutional Neural Network(CNN) in Android platform。
+##CnnForAndroid:A Classification Project using Convolutional Neural Network(CNN) in Android platform。It also support Caffe Model
 
-CnnForAndroid is a android platform's implementation of deep learning using Tiny-cnn structure and provide a Vehicle Recognition sample.
+CnnForAndroid is a android platform's implementation of deep learning using Tiny-cnn structure and provide two Recognition sample:one is gender Recognition for caffe net ; two is Car logo recognition for tiny-cnn net.
 
 #Dependencies
 
-[Opencv](http://opencv.org/)(for Android platform)
+[Opencv](http://opencv.org/)(for Android platform Opencv-2.4.9)
 
-[Tiny-cnn](https://github.com/nyanp/tiny-cnn#features)
+[Tiny-cnn](https://github.com/nyanp/tiny-cnn#features)(old Version)
+
+[protobuf](https://github.com/google/protobuf)
+
+#Caffe model
+tiny-cnn provide the caffe_convertor to support the caffe model.The project also support the caffe model for compiling the caffe_convertor and protobuf.
+
+#For Gender Recogniton
+
+ 	this project also provide a sample for caffe model to distingguish man from woman also called gender recognition. 
+ 	
+ 1.Where from Training data?
+ 	
+ 	MORPH Album 2 [4].
+ 2.the net of caffe ?
+	
+ 3.How to train yourself model?
+ 	
+ 	Please using caffe and train your model and replace  /assets/tinyfile/*.caffemodel and /assets/tinyfile/*.protobuf file/ and change those filenames in tinyCnn.java file.
 
 #For Vehicle Recogniton 
 
 1.What is Vehicle Recognition?
 
- this project classify Car according to Car logo.Now  the lasting Version just distinguish VM car from other version.
+ this project classify Car according to Car logo.Now  the lasting Version just distinguish VM car from other.
  In the future I will add more category。
 
 2.Where from Training Data ?
@@ -84,6 +102,7 @@ enough object images to get the wb-file(weights and bias values).Finish , replac
 [2]Humayun Karim Sulehria, Ye Zhang.Vehicle Logo Recognition Using Mathematical Morphology
 
 [3]Humayun Karim Sulehria, Ye Zhang.Vehicle Logo Recognition Based on Bag-of-Words.IEEE International Conference on Advanced Video and Signal Based Surveillance,2013.
+[4]
 
 #Running Screenshot
 
