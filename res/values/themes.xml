@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    
+     <style name="Translucent_NoTitle" parent="@android:style/Theme.Translucent.NoTitleBar">
+        <item name="android:windowBackground"> @android:color/transparent</item>
+        <item name="android:colorBackgroundCacheHint"> @android:color/transparent</item>
+        <item name="android:windowIsTranslucent">false</item>
+        <item name="android:windowAnimationStyle"> @android:style/Animation</item>
+    </style>
+    
+</resources>
