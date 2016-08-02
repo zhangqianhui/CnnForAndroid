@@ -29,7 +29,6 @@
 #include "tiny_cnn/util/image.h"
 #include "tiny_cnn/layers/partial_connected_layer.h"
 #include "tiny_cnn/activations/activation_function.h"
-#include  "common.h"
 
 namespace tiny_cnn {
     
@@ -65,7 +64,6 @@ public:
         in_(in_width, in_height, in_channels),
         out_(pool_out_dim(in_width, pooling_size, stride), pool_out_dim(in_height, pooling_size, stride), in_channels)
     {
-    	set_worker_count(CNN_TASK_SIZE);
         init_connection();
     }
 
@@ -82,14 +80,11 @@ public:
     }
 
     virtual const vec_t& forward_propagation(const vec_t& in, size_t index) override {
-
-
         auto& ws = this->get_worker_storage(index);
-        debug("12");
         vec_t& out = ws.output_;
         vec_t& a = ws.a_;
         std::vector<cnn_size_t>& max_idx = max_pooling_layer_worker_storage_[index].out2inmax_;
-        debug("13");
+
         for_(parallelize_, 0, size_t(out_size_), [&](const blocked_range& r) {
             for (int i = r.begin(); i < r.end(); i++) {
                 const auto& in_index = out2in_[i];
@@ -108,9 +103,6 @@ public:
         for_i(parallelize_, out_size_, [&](int i) {
             out[i] = h_.f(a, i);
         });
-
-        debug("14");
-
         return next_ ? next_->forward_propagation(out, index) : out;
     }
 

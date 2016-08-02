@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="app_name">tinycnn</string>
+    <string name="app_name">CarlogoReco</string>
     <string name="action_settings">Settings</string>
 
 </resources>

@@ -11,7 +11,6 @@
 #include <list>
 #include <sstream>
 
-
 //using namespace std;
 
 #ifndef COMMON_H

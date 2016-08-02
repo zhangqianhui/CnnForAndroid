@@ -5,10 +5,6 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
 
-import jni.Predictor;
-import jni.Predictor.ModelType.Type;
-import jni.testCnn;
-
 import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.content.Context;
@@ -25,8 +21,6 @@ public class SplashActivity extends Activity{
 	
 	private  ProgressBar  dataLoadPro ;
     private loadDataNati loadDataHandler ;
-    private static Predictor predictor ;
-    public static Predictor getPredictor() {return predictor ;}
     
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -83,15 +77,6 @@ public class SplashActivity extends Activity{
 					case 0:
 						
 						dataLoadPro.setVisibility(View.GONE);
-						
-						/*create the predictor for tiny_cnn*/
-						
-						//predictor = new Predictor(new Predictor.ModelType(Type.TinyCNN));
-					
-						
-						/*create the predictor for caffe */
-						
-						predictor = new Predictor(new Predictor.ModelType(Type.CAFFE));
 						
 						break;
 					}
