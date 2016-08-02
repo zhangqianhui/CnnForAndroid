@@ -44,10 +44,16 @@
 	     android:layout_alignParentBottom="true"
 	     android:orientation="vertical"
 	     >
-         
 	  <Button
-	    android:id="@+id/login_button"
-	    android:text="capture"
+	    android:id="@+id/patureButton"
+	    android:text="capture for caffemodel"
+	    android:layout_width="fill_parent"
+	    android:layout_height="wrap_content"
+	    />
+	  
+	  <Button
+	    android:id="@+id/patureButton2"
+	    android:text="capture for tiny model"
 	    android:layout_width="fill_parent"
 	    android:layout_height="wrap_content"
 	    />

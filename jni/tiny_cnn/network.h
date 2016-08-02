@@ -37,6 +37,7 @@
 #include "tiny_cnn/layers/layers.h"
 #include "tiny_cnn/lossfunctions/loss_function.h"
 #include "tiny_cnn/activations/activation_function.h"
+#include "common.h"
 
 namespace tiny_cnn {
 
@@ -531,7 +532,11 @@ private:
 
     const vec_t& fprop(const vec_t& in, int idx = 0) {
         if (in.size() != (size_t)in_dim())
-            data_mismatch(*layers_[0], in);
+        {
+        	debug("test 7");
+        	data_mismatch(*layers_[0], in);
+        }
+        debug("input the size %d" , in.size());
         return layers_.head()->forward_propagation(in, idx);
     }
 

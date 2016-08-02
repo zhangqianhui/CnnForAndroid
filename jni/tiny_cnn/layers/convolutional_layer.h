@@ -29,6 +29,7 @@
 #include "tiny_cnn/util/image.h"
 #include "tiny_cnn/activations/activation_function.h"
 #include <deque>
+#include "common.h"
 
 namespace tiny_cnn {
 
@@ -323,15 +324,16 @@ public:
 
     virtual const vec_t& forward_propagation(const vec_t& in_raw, size_t worker_index) override
     {
-        copy_and_pad_input(in_raw, static_cast<int>(worker_index));
+        copy_and_pad_input(in_raw , static_cast<int>(worker_index));
 
         auto& ws = this->get_worker_storage(worker_index);
+        debug("8");
         vec_t &a = ws.a_; // w*x
         vec_t &out = ws.output_; // output
         const vec_t &in = *(conv_layer_worker_storage_[worker_index].prev_out_padded_); // input
-        
+        debug("9");
         std::fill(a.begin(), a.end(), float_t(0));
-
+        debug("10");
         for_i(parallelize_, out_.depth_, [&](int o) {
             for (cnn_size_t inc = 0; inc < in_.depth_; inc++) {
                 if (!tbl_.is_connected(o, inc)) continue;
@@ -363,7 +365,7 @@ public:
                 std::for_each(pa, pa + out_.width_ * out_.height_, [&](float_t& f) { f += b; });
             }
         });
-
+        debug("11");
         for_i(parallelize_, out_size_, [&](int i) {
             out[i] = h_.f(a, i);
         });
