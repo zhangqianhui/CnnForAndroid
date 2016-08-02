@@ -25,7 +25,7 @@ tiny-cnn provide the caffe-convertor.cpp to support the caffe model.The project 
  	
  2.the net of caffe ?
 	
-	![](https://github.com/zhangqianhui/CnnForAndroid/blob/master/photo%20for%20readme/net.PNG) 
+	![](https://github.com/zhangqianhui/CnnForAndroid/blob/master/photo%20for%20readme/net.PNG)
 	
  3.How to train yourself caffe's model?
  	
