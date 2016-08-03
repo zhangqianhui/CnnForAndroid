@@ -128,7 +128,7 @@ enough object images to get the wb-file(weights and bias values).Finish , replac
 
 (3)For gender Recognition
 
-
+![](https://github.com/zhangqianhui/CnnForAndroid/blob/master/photo%20for%20readme/app.png)
 
 #Discussing
 * [issue](https://github.com/zhangqianhui/CnnForAndroid/issues/new)
