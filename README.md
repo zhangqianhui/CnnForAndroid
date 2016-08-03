@@ -20,7 +20,8 @@ tiny-cnn provide the caffe-convertor.cpp to support the caffe model.The project 
  	
  1.Where from training data?
  	
- 	MORPH Album 2 [4].
+ 	MORPH Album 2.
+ 	
  	the test accuracy is 90.01% in my caffe's net.
  	
  2.the net of caffe ?
@@ -33,7 +34,20 @@ tiny-cnn provide the caffe-convertor.cpp to support the caffe model.The project 
  	(2)then replace  /assets/tinyfile//.caffemodel and /assets/tinyfile/*.protobuf file/.
  	(3)Finish  change those filenames in tinyCnn.java file.
 
-#For Vehicle Recogniton 
+#How to install it?
+ 	
+ 	no need install.
+
+	Just download or git clone it and then open it by eclipse with opencv for java lib ,  use NDK to build it.
+ 	Surely your libs docu have the opencv_java.so file or you must add this file(from Opencv-android docu).
+ 
+#Compile it 
+ 
+ needful tools： NDK + eclipse + adt.
+ 
+ or android studio.
+ 
+#For Vehicle Recogniton for tiny-cnn net 
 
 1.What is Vehicle Recognition?
 
@@ -91,10 +105,6 @@ Code:
  ![](https://github.com/zhangqianhui/CnnForAndroid/blob/master/photo%20for%20readme/test.PNG)
  
  		
-#How to use it?
- 
- Just download or git clone it and then open it by eclipse with opencv for java lib ,  use NDK to build it.
- Surely your libs docu have the opencv_java.so file or you must add this file(from Opencv-android docu).
  
 #How to use it to recognize face or other object?
 
@@ -108,12 +118,11 @@ enough object images to get the wb-file(weights and bias values).Finish , replac
 [2]Humayun Karim Sulehria, Ye Zhang.Vehicle Logo Recognition Using Mathematical Morphology
 
 [3]Humayun Karim Sulehria, Ye Zhang.Vehicle Logo Recognition Based on Bag-of-Words.IEEE International Conference on Advanced Video and Signal Based Surveillance,2013.
-[4]
 
 #Running Screenshot
 
+(1)For Vehicle Recogniton
 
-(1)For Vehicle Recogniton 
 ![](https://github.com/zhangqianhui/CnnForAndroid/blob/master/photo%20for%20readme/23.png)
 ![](https://github.com/zhangqianhui/CnnForAndroid/blob/master/photo%20for%20readme/24.png) 
 
