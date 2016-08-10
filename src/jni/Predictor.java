@@ -59,7 +59,7 @@ public class Predictor{
     * get the predict's result
     * */
    
-   public static native int getPredict(long handle , long Mataddr , int type , String caffeMean);
+   public static native int getPredict(long handle , long Mataddr , int type);
 
    
 }

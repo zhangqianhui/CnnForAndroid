@@ -31,15 +31,8 @@ public class imageDeal {
         detector.detectMultiScale(matofbyte , faceDetections , 1.1 , 2 , 0 , new Size(10 , 10) , new Size(300 , 300));
         if(faceDetections.toArray().length != 0)
         {
-        	int pad = 20;
         	Rect rect = faceDetections.toArray()[0];
-        	int x_left = (rect.x - pad) > 0 ? (rect.x - pad) : 0;
-        	int y_left =(rect.y - pad) > 0 ? (rect.y - pad) : 0;
-        	
-        	int x_right = (rect.x + rect.width + 2*pad) <= matofbyte.cols() ? (rect.x + rect.width + 2*pad) : matofbyte.cols();
-        	int y_right = (rect.y + rect.height + 2*pad) <= matofbyte.rows() ? (rect.y + rect.height + 2*pad) : matofbyte.rows();
-        	
-        	faceMat = new Mat(matofbyte , new Range(y_left , y_right)  , new Range(x_left , x_right));
+        	faceMat = new Mat(matofbyte , new Range(rect.y , rect.y + rect.height)  , new Range(rect.x , rect.x + rect.width));
     		//result = Bitmap.createBitmap(oldBit , rect.x  , rect.y , rect.width   , rect.height);
     		//Toast.makeText(context , "execute2" , Toast.LENGTH_SHORT).show();
         }
@@ -49,7 +42,7 @@ public class imageDeal {
         }
         //Size s = new Size(100 , 100);
         //Imgproc.resize(faceMat , faceMat, s);
-        return faceMat ; 
+        return faceMat; 
 	}
 
 //	/*rotate the Image View*/
@@ -105,6 +98,7 @@ public class imageDeal {
 	 public static Mat matConvertBit(Bitmap bitmap) throws NullPointerException
 	 {
 		    Mat tmp ;
+		    
 			try{
 				
 				/*Ðý×ª90¶È*/
