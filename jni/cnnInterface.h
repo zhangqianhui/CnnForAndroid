@@ -39,7 +39,7 @@ JNIEXPORT jlong JNICALL Java_jni_Predictor_createPredictorforCaffe(JNIEnv *env ,
 
 JNIEXPORT jfloat* JNICALL Java_jni_Predoctor_getFeacture(JNIEnv *env , jclass obj , jlong handle , jlong addr);
 
-JNIEXPORT jint JNICALL Java_jni_Predictor_getPredict(JNIEnv *env , jclass obj , jlong handle ,  jlong addr , jint type);
+JNIEXPORT jint JNICALL Java_jni_Predictor_getPredict(JNIEnv *env , jclass obj , jlong handle ,  jlong addr , jint type , jstring caffeMean);
 
 
 #ifdef __cplusplus

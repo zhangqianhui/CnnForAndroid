@@ -78,6 +78,7 @@ void convert_image(cv::Mat * img ,
 
 
 void preprocess(const cv::Mat& img,
+				const cv::Mat& mean,
                 int num_channels,
                 cv::Size geometry,
                 vector<cv::Mat>* input_channels)
@@ -95,15 +96,15 @@ void preprocess(const cv::Mat& img,
     cv::Mat sample_float;
     sample_resized.convertTo(sample_float, num_channels == 3 ? CV_32FC3 : CV_32FC1);
 
-    //// subtract mean
-    //if (mean.size().width > 0) {
-    //    cv::Mat sample_normalized;
-    //    cv::subtract(sample_float, mean , sample_normalized);
-    //    cv::split(sample_normalized, *input_channels);
-    //}
-    //else {
+    // subtract mean
+    if (mean.size().width > 0) {
+        cv::Mat sample_normalized;
+        cv::subtract(sample_float, mean , sample_normalized);
+        cv::split(sample_normalized, *input_channels);
+    }
+    else {
         cv::split(sample_float, *input_channels);
-    //}
+    }
 }
 
 
@@ -159,6 +160,7 @@ void construct_net(network<mse, gradient_descent_levenberg_marquardt>& nn) {
 }
 
 int getResultforCaffe(long h ,
+		  string  mean_file ,
           cv::Mat * img_file)
 {
    // auto labels = get_label_list(label_file);
@@ -171,7 +173,8 @@ int getResultforCaffe(long h ,
     int width = (*p)->in_shape().width_;
     debug("get4");
 	//cout << channels << " " << width << " " << height;
-    // auto mean = compute_mean(mean_file , width, height);
+    auto mean = compute_mean(mean_file , width, height);
+
     vector<float> inputvec(width*height*channels);
     vector<cv::Mat> input_channels;
     debug("get5");
@@ -179,7 +182,7 @@ int getResultforCaffe(long h ,
 		/*c++11µÄÌØÐÔ*/
         input_channels.emplace_back(height , width , CV_32FC1 , &inputvec[width*height*i]);
 
-    preprocess(*img_file , 3 , cv::Size(width, height), &input_channels);
+    preprocess(*img_file , mean , 3 , cv::Size(width, height), &input_channels);
     debug("get6");
     vector<tiny_cnn::float_t> vec(inputvec.begin(), inputvec.end());
 
@@ -312,17 +315,21 @@ JNIEXPORT jlong JNICALL Java_jni_Predictor_createPredictor(JNIEnv *env , jclass 
 
 /**/
 
-JNIEXPORT jint JNICALL Java_jni_Predictor_getPredict(JNIEnv *env , jclass obj , jlong handle , jlong addr , jint type)
+JNIEXPORT jint JNICALL Java_jni_Predictor_getPredict(JNIEnv *env , jclass obj , jlong handle , jlong addr , jint type , jstring caffeMean)
 {
+	const char *mean = env->GetStringUTFChars(caffeMean , 0);
+
 	jint result ;
 	cv::Mat *src = (cv::Mat *)addr;
 	debug("get1");
 	if(type == 0)
-	result = getResultforCaffe(handle , src);
+	result = getResultforCaffe(handle , mean , src);
 	else
 	result = getResult(handle , src);
 
 	debug("get2");
+
+	env->ReleaseStringUTFChars(caffeMean , mean);
 
 	return result;
 }

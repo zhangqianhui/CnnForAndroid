@@ -8,6 +8,7 @@ import java.io.File;
 
 import jni.Predictor;
 import jni.Predictor.ModelType.Type;
+import jni.testCnn;
 
 import org.opencv.android.OpenCVLoader;
 import org.opencv.core.Mat;
@@ -60,6 +61,7 @@ public class MainActivity extends Activity implements OnClickListener{
 		
 	    if (!OpenCVLoader.initDebug()) {
 	        //Handle initialization error
+	    	
 	    }
 	    else
 	    {
@@ -86,12 +88,11 @@ public class MainActivity extends Activity implements OnClickListener{
         patureButton2.setOnClickListener(this);
         open = (Button)findViewById(R.id.open);
         //open.setOnClickListener(this);
-        
 	}
 	@SuppressLint("NewApi") @SuppressWarnings("deprecation")
 	public static Camera getCameraInstance(){
 		
-	    Camera c = null;
+	    Camera c = null ;
 	    try {
 	    	
 	        c = Camera.open(FindFrontCamera()); // attempt to get a Camera instance
@@ -116,7 +117,7 @@ public class MainActivity extends Activity implements OnClickListener{
                return camIdx ;  
             }  
         }  
-        return -1 ;  
+        return -1;  
     } 
     
     private void setRightCameraOrientation(Camera mCamera) {  
@@ -209,7 +210,6 @@ public class MainActivity extends Activity implements OnClickListener{
 	    		mCamera.startPreview();
 	            return ;
 	        }
-	    	
 	    	/**/
 	    	Highgui.imwrite(save_img , faceMat);
 	    	
@@ -252,7 +252,6 @@ public class MainActivity extends Activity implements OnClickListener{
 					{
 						Toast.makeText(MainActivity.this ,"Consumption time:"+msg.arg1 +" it is not VM car" , Toast.LENGTH_SHORT).show();
 					}
-					
 				}
 				
 				break ; 
@@ -275,11 +274,11 @@ public class MainActivity extends Activity implements OnClickListener{
 			long handle = SplashActivity.getPredictor().getHandle();
 			int result = 0;
 			if(!flag_model)
-			result = Predictor.getPredict(handle , faceMat.nativeObj , 0);
+			result = Predictor.getPredict(handle , faceMat.nativeObj , 0 , testCnn.caffeMean);
 			else
 			{
 				Imgproc.cvtColor(faceMat , faceMat , Imgproc.COLOR_RGB2GRAY);
-				result = Predictor.getPredict(handle , faceMat.nativeObj , 1);
+				result = Predictor.getPredict(handle , faceMat.nativeObj , 1 , null);
 			}
 			
 			long end = System.currentTimeMillis();
