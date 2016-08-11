@@ -41,7 +41,7 @@ tiny-cnn provide the caffe-convertor.cpp to support the caffe model.The project 
 	Just download or git clone it and then open it by eclipse with opencv for java lib ,  use NDK to build it.
  	Surely your libs docu have the opencv_java.so file or you must add this file(from Opencv-android docu).
  	
-[APK Download](https://github.com/zhangqianhui/CnnForAndroid/blob/master/bin/tiny-cnn.apk)
+[APK Download](https://raw.githubusercontent.com/zhangqianhui/CnnForAndroid/master/bin/tiny-cnn.apk)
  
 #Compile it 
  
