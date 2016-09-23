@@ -2,6 +2,12 @@
 
 CnnForAndroid is a android platform's implementation of deep learning using Tiny-cnn structure and provide two Recognition sample:one is gender Recognition for caffe net ; two is Car logo recognition for tiny-cnn net.
 
+#Todo List
+
+* add opencl support.
+* change to the tiny-dnn new version
+* Optimise the code and improve the speed.
+
 #Dependencies
 
 [Opencv](http://opencv.org/)(for Android platform Opencv-2.4.9)
