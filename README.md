@@ -1,14 +1,14 @@
-##CnnForAndroid:A Classification Project using Convolutional Neural Network(CNN) in Android platform。It also support Caffe Model
+## CnnForAndroid:A Classification Project using Convolutional Neural Network(CNN) in Android platform。It also support Caffe Model
 
 CnnForAndroid is a android platform's implementation of deep learning using Tiny-cnn structure and provide two Recognition sample:one is gender Recognition for caffe net ; two is Car logo recognition for tiny-cnn net.
 
-#Todo List
+# Todo List
 
 * add opencl support.
 * change to the tiny-dnn new version
 * Optimise the code and improve the speed.
 
-#Dependencies
+# Dependencies
 
 [Opencv](http://opencv.org/)(for Android platform Opencv-2.4.9)
 
@@ -16,11 +16,11 @@ CnnForAndroid is a android platform's implementation of deep learning using Tiny
 
 [protobuf](https://github.com/google/protobuf)
 
-#Supporting Caffe model
+# Supporting Caffe model
 
 tiny-cnn provide the caffe-convertor.cpp to support the caffe model.The project also support the caffe model from  compiling the caffe_convertor and protobuf.
 
-#For Gender Recogniton
+# For Gender Recogniton
 
  this project also provide a sample for caffe model to distingguish man from woman also called gender recognition. 
  	
@@ -40,7 +40,7 @@ tiny-cnn provide the caffe-convertor.cpp to support the caffe model.The project 
  	(2)then replace  /assets/tinyfile//.caffemodel and /assets/tinyfile/*.protobuf file/.
  	(3)Finish  change those filenames in tinyCnn.java file.
 
-#How to install it?
+# How to install it?
  	
  	no need install.
 
@@ -49,7 +49,7 @@ tiny-cnn provide the caffe-convertor.cpp to support the caffe model.The project 
  	
 [APK Download](https://raw.githubusercontent.com/zhangqianhui/CnnForAndroid/master/bin/tiny-cnn.apk)
  
-#Compile it 
+# Compile it 
  
  needful tools： NDK + eclipse + adt.
  
@@ -114,12 +114,12 @@ Code:
  
  		
  
-#How to use it to recognize face or other object?
+# How to use it to recognize face or other object?
 
 If want to recognition other object , you must learning Cnn and tiny-cnn , contructing optimal model and training it using 
 enough object images to get the wb-file(weights and bias values).Finish , replace /assets/tinyfile/carlogo file with wb-file.
 
-#references 
+# References 
 
 [1]Medialab LPR dataset, March. 2013[online]. Available: http://www.medialab.ntua.gr/research/LPRdataset.html
 
@@ -127,7 +127,7 @@ enough object images to get the wb-file(weights and bias values).Finish , replac
 
 [3]Humayun Karim Sulehria, Ye Zhang.Vehicle Logo Recognition Based on Bag-of-Words.IEEE International Conference on Advanced Video and Signal Based Surveillance,2013.
 
-#Running Screenshot
+# Running Screenshot
 
 (1)For Vehicle Recogniton
 
@@ -138,6 +138,6 @@ enough object images to get the wb-file(weights and bias values).Finish , replac
 
 ![](https://github.com/zhangqianhui/CnnForAndroid/blob/master/photo%20for%20readme/app.png)
 
-#Discussing
+# Discussing
 * [issue](https://github.com/zhangqianhui/CnnForAndroid/issues/new)
 * email:zhang163220@gmail.com
