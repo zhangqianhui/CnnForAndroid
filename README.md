@@ -1,6 +1,6 @@
 ## CnnForAndroid:A Classification Project using Convolutional Neural Network(CNN) in Android platform。It also support Caffe Model
 
-CnnForAndroid is a android platform's implementation of deep learning using Tiny-cnn structure and provide two Recognition sample:one is gender Recognition for caffe net ; two is Car logo recognition for tiny-cnn net.
+CnnForAndroid is an android platform's implementation of deep learning using Tiny-cnn structure and provide two Recognition sample:one is gender Recognition for caffe net ; two is Car logo recognition for tiny-cnn net.
 
 # Todo List
 
